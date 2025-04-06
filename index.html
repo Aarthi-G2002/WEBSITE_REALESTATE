@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagicBricks Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-nav-left">
+                <a href="#"><i class="fas fa-phone"></i> +91 9876543210</a>
+                <a href="#"><i class="fas fa-envelope"></i> support@magicbricks.com</a>
+            </div>
+            <div class="top-nav-right">
+                <a href="#" id="shortlist-link"><i class="fas fa-heart"></i> Shortlist</a>
+                <a href="#"><i class="fas fa-bell"></i> Alerts</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+  <nav class="main-nav">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html"><img src="image/realestateIcon.png" alt="MagicBricks Clone"></a>
+      <h1>Magic Bricks</h1>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#" class="active">Buy</a>
+      <a href="sell.html">Sell</a>
+      <a href="#">Rent</a>
+      <a href="#">Commercial</a>
+      <a href="#">Projects</a>
+      <a href="#">Agents</a>
+      <a href="#">Loans</a>
+      <a href="#">Advice</a>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search Section -->
+        <div class="search-section">
+            <form id="property-search-form">
+                <div class="search-field">
+                    <input type="text" id="search-query" placeholder="Search by Locality, Project or Landmark">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-filters">
+                    <select id="city-select">
+                        <option value="">Select City</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="chennai">Chennai</option>
+                    </select>
+                    <select id="budget-select">
+                        <option value="">Budget</option>
+                        <option value="0-50">Under 50 Lakhs</option>
+                        <option value="50-100">50 Lakhs - 1 Crore</option>
+                        <option value="100+">Above 1 Crore</option>
+                    </select>
+                    <select id="bhk-select">
+                        <option value="">BHK Type</option>
+                        <option value="1">1 BHK</option>
+                        <option value="2">2 BHK</option>
+                        <option value="3">3 BHK</option>
+                    </select>
+                    <select id="type-select">
+                        <option value="">Property Type</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="villa">Villa</option>
+                    </select>
+                    <button type="submit" class="search-btn">Search</button>
+    	            </div>
+            </form>
+        </div>
+        
+        <!-- Results Count -->
+        <div id="results-count" class="search-results-count"></div>
+        
+        <!-- Properties Grid -->
+        <div class="properties-grid" id="properties-grid"></div>
+    </div>
+
+    <!-- Shortlist Modal -->
+    <div id="shortlist-modal" class="modal">
+        <div class="modal-content">
+            <h2>Your Shortlisted Properties</h2>
+            <div id="shortlist-items"></div>
+            <button id="close-shortlist" class="remove-btn" style="margin-top: 20px;">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
