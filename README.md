@@ -69,6 +69,6 @@ The **Real Estate Website** is a responsive, user-friendly web application desig
 - **CSS3**
 - **JavaScript**
 - **Responsive Design**
-- Optional: `localStorage` for wishlist
+-  localStorage for wishlist
 
 ---
